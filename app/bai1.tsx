@@ -23,7 +23,7 @@ const Bai1a: React.FC = () => {
     return (
         <SafeAreaView style={tailwind('h-full')}>
             <Text style={tailwind('inline border-2 border-red-500/100')}> sẽ chuyển trang sau {timeLeft} giây</Text>
-            <Button title='tải lại' onPress={() => setTimeLeft(10)}></Button>
+            <Button title='đặt lại 10 giây' onPress={() => setTimeLeft(10)}></Button>
             <View style={tailwind('py-3')}>
 
                 <Text>Tên tôi là: Trần Hoàng Anh Tú </Text>
