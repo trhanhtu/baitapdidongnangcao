@@ -3,7 +3,6 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { useTailwind } from 'tailwind-rn';
 import { appColors } from '../../constants/appColors';
-import { appInfo } from '../../constants/appInfo';
 import { globalStyles } from '../../styles/globalStyles';
 const OnboardingScreen = ({ navigation }: any) => {
     const tailwind = useTailwind();
@@ -18,31 +17,19 @@ const OnboardingScreen = ({ navigation }: any) => {
                 activeDotColor={appColors.white}
             >
                 <Image
+                    resizeMode='contain'
                     source={require('../../../assets/images/onboarding-1.png')}
-                    style={{
-                        flex: 1,
-                        width: appInfo.sizes.WIDTH,
-                        height: appInfo.sizes.HEIGHT,
-                        resizeMode: 'cover',
-                    }}
+                    style={tailwind('flex-1 w-full h-full')}
                 />
                 <Image
+                    resizeMode='contain'
                     source={require('../../../assets/images/onboarding-2.png')}
-                    style={{
-                        flex: 1,
-                        width: appInfo.sizes.WIDTH,
-                        height: appInfo.sizes.HEIGHT,
-                        resizeMode: 'cover',
-                    }}
+                    style={tailwind('flex-1 w-full h-full')}
                 />
                 <Image
+                    resizeMode='contain'
                     source={require('../../../assets/images/onboarding-2.png')}
-                    style={{
-                        flex: 1,
-                        width: appInfo.sizes.WIDTH,
-                        height: appInfo.sizes.HEIGHT,
-                        resizeMode: 'cover',
-                    }}
+                    style={tailwind('flex-1 w-full h-full')}
                 />
             </Swiper>
             <View

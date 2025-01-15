@@ -39,9 +39,17 @@ const ButtonComponent = (props: Props) => {
         type,
         disable,
     } = props;
-
-    return (
-        <View style={{ alignItems: 'center' }}>
+    let bodyContent = (
+        <TouchableOpacity onPress={onPress}>
+            <TextComponent
+                flex={0}
+                text={text}
+                color={type === 'link' ? appColors.primary : appColors.text}
+            />
+        </TouchableOpacity>
+    )
+    if (type !== "link") {
+        bodyContent = (
             <TouchableOpacity
                 disabled={disable}
                 onPress={onPress}
@@ -76,15 +84,11 @@ const ButtonComponent = (props: Props) => {
                 />
                 {icon && iconFlex === 'right' && icon}
             </TouchableOpacity>
-            {type === 'link' && (
-                <TouchableOpacity onPress={onPress}>
-                    <TextComponent
-                        flex={0}
-                        text={text}
-                        color={type === 'link' ? appColors.primary : appColors.text}
-                    />
-                </TouchableOpacity>
-            )}
+        )
+    }
+    return (
+        <View style={{ alignItems: 'center' }}>
+            {bodyContent}
         </View>
     );
 };
