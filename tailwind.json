@@ -9,14 +9,14 @@
 			"position": "absolute"
 		}
 	},
+	"relative": {
+		"style": {
+			"position": "relative"
+		}
+	},
 	"bottom-5": {
 		"style": {
 			"bottom": 20
-		}
-	},
-	"left-0": {
-		"style": {
-			"left": 0
 		}
 	},
 	"left-5": {
@@ -27,11 +27,6 @@
 	"right-5": {
 		"style": {
 			"right": 20
-		}
-	},
-	"top-0": {
-		"style": {
-			"top": 0
 		}
 	},
 	"m-0": {
